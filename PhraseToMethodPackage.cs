@@ -20,7 +20,7 @@ namespace PhraseToMethod
 		protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
 		{
 			await this.RegisterCommandsAsync();
-			Command1.Initialize(this);
+			PascalCaseToPhrase.Initialize(this);
 			PhraseToPascalCase.Initialize(this);
 		}
 	}

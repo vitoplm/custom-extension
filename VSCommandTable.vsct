@@ -75,10 +75,10 @@
 		</Groups>-->
 
 		<Buttons>
-			<Button guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="Command1Id" type="Button">
+			<Button guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="PascalToPhraseId" type="Button">
 				<Icon guid="guidImages" id="bmpPic1" />
 				<Strings>
-					<ButtonText>Command1</ButtonText>
+					<ButtonText>Transform PascalCase to phrase</ButtonText>
 				</Strings>
 			</Button>
 			<Button guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="PhraseToPascalId" type="Button">
@@ -100,7 +100,7 @@
            The parent of a group is a menu, context menu or toolbar.
            The parent of a submenu is always a group
            The priority sets the position of the group compared to the priority of other existing groups in the menu.
-           The order is: Toolbar or Menu > MyGroupForSubmenu > PhraseConverterSubmenu > MyGroupForCommands > Command1Id, PhraseToPascalId
+           The order is: Toolbar or Menu > MyGroupForSubmenu > PhraseConverterSubmenu > MyGroupForCommands > PascalToPhraseId, PhraseToPascalId
       -->
 		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="MyGroupForSubmenu" priority="0xFFFF">
 			<!-- The parent of the group will be the solution context menu -->
@@ -120,7 +120,7 @@
 		<!-- Placement for commands.
            The parent of a command is always a group, never a menu, context menu or toolbar.
       -->
-		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="Command1Id" priority="0x0001" >
+		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="PascalToPhraseId" priority="0x0001" >
 			<Parent guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="MyGroupForCommands"/>
 		</CommandPlacement>
 		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="PhraseToPascalId" priority="0x0002" >
@@ -143,7 +143,7 @@
 			<IDSymbol name="MyGroupForSubmenu" value="0x1021" />
 			<IDSymbol name="PhraseConverterSubmenu" value="0x0100" />
 			<!-- Warning!!: Keep the value in syncwith the code in Command1.cs -->
-			<IDSymbol name="Command1Id" value="0x0101" />
+			<IDSymbol name="PascalToPhraseId" value="0x0101" />
 			<IDSymbol name="PhraseToPascalId" value="0x0102" />
 		</GuidSymbol>
 

@@ -95,20 +95,6 @@ namespace PhraseToMethod
 			{
 				docView?.TextBuffer.Replace(selection.Value, RemoveWhiteSpaceCapitalize(selection.Value.Snapshot.GetText(selection.Value.Span)));
 			}
-			
-			
-
-			//string message = string.Format(CultureInfo.CurrentCulture, "Inside {0}.MenuItemCallback()", this.GetType().FullName);
-			//string title = "Command2";
-
-			//// Show a message box to prove we were here
-			//VsShellUtilities.ShowMessageBox(
-			//	 this.ServiceProvider,
-			//	 message,
-			//	 title,
-			//	 OLEMSGICON.OLEMSGICON_INFO,
-			//	 OLEMSGBUTTON.OLEMSGBUTTON_OK,
-			//	 OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST);
 		}
 
 		private string RemoveWhiteSpaceCapitalize(string input)
