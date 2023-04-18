@@ -64,9 +64,9 @@
 		</Groups>
 
 		<Menus>
-			<Menu guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="MySubmenu" type="Menu">
+			<Menu guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="PhraseConverterSubmenu" type="Menu">
 				<Strings>
-					<ButtonText>My submenu</ButtonText>
+					<ButtonText>Phrase converter</ButtonText>
 				</Strings>
 			</Menu>
 		</Menus>
@@ -81,10 +81,10 @@
 					<ButtonText>Command1</ButtonText>
 				</Strings>
 			</Button>
-			<Button guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="Command2Id" type="Button">
+			<Button guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="PhraseToPascalId" type="Button">
 				<Icon guid="guidImages" id="bmpPic2" />
 				<Strings>
-					<ButtonText>Command2</ButtonText>
+					<ButtonText>Transform phrase to PascalCase</ButtonText>
 				</Strings>
 			</Button>
 		</Buttons>
@@ -100,7 +100,7 @@
            The parent of a group is a menu, context menu or toolbar.
            The parent of a submenu is always a group
            The priority sets the position of the group compared to the priority of other existing groups in the menu.
-           The order is: Toolbar or Menu > MyGroupForSubmenu > MySubmenu > MyGroupForCommands > Command1Id, Command2Id
+           The order is: Toolbar or Menu > MyGroupForSubmenu > PhraseConverterSubmenu > MyGroupForCommands > Command1Id, PhraseToPascalId
       -->
 		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="MyGroupForSubmenu" priority="0xFFFF">
 			<!-- The parent of the group will be the solution context menu -->
@@ -110,11 +110,11 @@
 			<!-- The parent of the group will be also the standard toolbar -->
 			<Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_STANDARD"/>
 		</CommandPlacement>
-		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="MySubmenu" priority="0x0001">
+		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="PhraseConverterSubmenu" priority="0x0001">
 			<Parent guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="MyGroupForSubmenu"/>
 		</CommandPlacement>
 		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="MyGroupForCommands" priority="0x0001">
-			<Parent guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="MySubmenu"/>
+			<Parent guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="PhraseConverterSubmenu"/>
 		</CommandPlacement>
 
 		<!-- Placement for commands.
@@ -123,7 +123,7 @@
 		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="Command1Id" priority="0x0001" >
 			<Parent guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="MyGroupForCommands"/>
 		</CommandPlacement>
-		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="Command2Id" priority="0x0002" >
+		<CommandPlacement guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="PhraseToPascalId" priority="0x0002" >
 			<Parent guid="guidVSPackageCommandCodeWindowContextMenuCmdSet" id="MyGroupForCommands"/>
 		</CommandPlacement>
 
@@ -141,10 +141,10 @@
 		<GuidSymbol name="guidVSPackageCommandCodeWindowContextMenuCmdSet" value="{bea4976d-811a-4dd0-9745-0bed7a658b5d}">
 			<IDSymbol name="MyGroupForCommands" value="0x1020" />
 			<IDSymbol name="MyGroupForSubmenu" value="0x1021" />
-			<IDSymbol name="MySubmenu" value="0x0100" />
+			<IDSymbol name="PhraseConverterSubmenu" value="0x0100" />
 			<!-- Warning!!: Keep the value in syncwith the code in Command1.cs -->
 			<IDSymbol name="Command1Id" value="0x0101" />
-			<IDSymbol name="Command2Id" value="0x0102" />
+			<IDSymbol name="PhraseToPascalId" value="0x0102" />
 		</GuidSymbol>
 
 		<GuidSymbol name="guidImages" value="{a156b47b-df48-4124-a918-ae1cd9492fcb}" >

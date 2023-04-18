@@ -30,7 +30,7 @@ namespace PhraseToMethod
         public const int MyGroupForSubmenu = 0x1021;
         public const int MySubmenu = 0x0100;
         public const int Command1Id = 0x0101;
-        public const int Command2Id = 0x0102;
+        public const int PhraseToPascalId = 0x0102;
         public const int bmpPic1 = 0x0001;
         public const int bmpPic2 = 0x0002;
     }

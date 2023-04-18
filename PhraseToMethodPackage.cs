@@ -21,7 +21,7 @@ namespace PhraseToMethod
 		{
 			await this.RegisterCommandsAsync();
 			Command1.Initialize(this);
-			Command2.Initialize(this);
+			PhraseToPascalCase.Initialize(this);
 		}
 	}
 }
