@@ -2,6 +2,7 @@
 using System.ComponentModel.Design;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 
 namespace PhraseToMethod
 {
@@ -71,16 +72,16 @@ namespace PhraseToMethod
 
 		private string PascalCaseToPhraseConverter(string input)
 		{
-			String output = "";
+			
+			StringBuilder strBuilder = new();
 			for (int i = 0; i < input.Length; i++)
 			{
 				if (i > 0 && char.IsUpper(input[i]))
-				{
-					output += " ";
-				}
-				output += input[i];
+					strBuilder.Append($" {input[i].ToString().ToLower()}");
+				else
+					strBuilder.Append(input[i]);
 			}
-			return output;
+			return strBuilder.ToString();
 		}
 	}
 }
